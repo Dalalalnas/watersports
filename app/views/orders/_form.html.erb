@@ -12,9 +12,17 @@
   <% end %>
   
   <div class="field">
-    <%= @ride.ridename %>
+      <%= f.label :rideName %><br />
+      <%= @ride.ridename %>
   </div>
 
+  
+    <div class="field">
+	    <%= f.label :price %><br />
+
+    <%= @ride.price %> 
+  </div>
+  
 
   <div class="field">
     <%= f.label :quantity %><br />

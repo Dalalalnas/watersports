@@ -8,6 +8,7 @@
     <th>Ridename</th>
     <th>Picture</th>
     <th>Video</th>
+    <th>Price</th>
     <th>Type</th>
     <th></th>
     <th></th>
@@ -21,8 +22,9 @@
 <% @rides.each do |ride| %>
   <tr>
     <td><%= ride.ridename %></td>
-  <td><%= image_tag(ride.picture, :size => "30x30") %></td>
+    <td><%= image_tag(ride.picture, :size => "30x30") %></td>
     <td><%= ride.video %></td>
+    <td><%= ride.price %></td>
     <td><%= ride.type_id %></td>
     <td><%= link_to 'Show', ride %></td>
     <td><%= link_to 'Edit', edit_ride_path(ride) %></td>

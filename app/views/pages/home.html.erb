@@ -1,7 +1,7 @@
 		<SCRIPT LANGUAGE="javascript">
 <!--
 function CONFIRM(){if (!confirm
-("I HOPE YOU ENJOY DALAL'S WATER SPORTS SITE! Please Leave us a Comment"))
+("I HOPE YOU ENJOY DALAL'S WATER SPORTS SITE! Please Leave us a Comment about the Ride of your choice!"))
 history.go(-1);return " "}
 document.writeln(CONFIRM())
 <!-- END -->
@@ -38,9 +38,6 @@ document.writeln(CONFIRM())
             this.setHomePage('localhost:3000');">
              Click Here to Make Dalal's Water Sports Your Home Page
             </SPAN>
-
-
-	 
 		</div>
 
 
@@ -51,7 +48,8 @@ document.writeln(CONFIRM())
 
 <center>
 <h1>Welcome! </h1>
-<p> New user? <%= link_to "Sign up by Entering your Details NOW!", new_user_path %></p>
+<p> New user? <%= link_to "Sign up by Entering your Details NOW!", new_user_path %></p>  			
+
 				<FONT COLOR="blue"><h2>Fun in the Sun!</h2></FONT>
 
 
@@ -66,5 +64,6 @@ document.writeln(CONFIRM())
                    c.parentNode.insertBefore(cp, c); })(); </script><noscript></noscript>
 				</center>
 				
+
 			
 			<%= yield %>

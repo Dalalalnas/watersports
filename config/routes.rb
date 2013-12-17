@@ -1,5 +1,9 @@
 Watersports::Application.routes.draw do
 
+  get "check/index"
+
+  get "check/show"
+
   resources :orders
 
   resources :posts
