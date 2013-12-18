@@ -50,18 +50,19 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json   
   
- def create
+  	
+	def create
     @order = Order.new(params[:order])
+		if @ride 
+		   @order.ride_id = @current_user.id  # sets the user_id fk
+		   @order.user_id = @current_user.id  # sets the user_id fk
+		   @order.save       # saves to the post table 
+		    end
     respond_to do |format|
-      if @order.save 
-        format.html { redirect_to @order, notice: 'ORDER was successfully created.' }
-        format.json { render json: @order, status: :created, location: @order }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+			format.html {redirect_to @order}
+		end
+	end	
+
 
 
   # PUT /orders/1

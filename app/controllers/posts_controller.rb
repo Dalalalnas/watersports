@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-   before_filter :authorise  #makes sure someone is sign
+   before_filter :authorise  #makes sure someone is signed in
 	
 	def create
 		@ride = Ride.find params[:ride_id]
@@ -7,9 +7,7 @@ class PostsController < ApplicationController
 		   @post = @ride.posts.create params[:post]
 		   @post.user_id = @current_user.id  # sets the user_id fk
 		   @post.save       # saves to the post table 
-		   
-		   
-		 end
+		   end
     
 		respond_to do |format|
 			format.html {redirect_to @ride}
@@ -25,7 +23,5 @@ class PostsController < ApplicationController
 		format.html {redirect_to @ride}
 		end
 	end
-	
-
 	
 end

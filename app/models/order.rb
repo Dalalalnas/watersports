@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
-has_many :rides, :dependent => :destroy
+belongs_to :user
+belongs_to :ride
+
 
 end

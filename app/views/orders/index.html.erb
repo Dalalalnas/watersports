@@ -4,8 +4,7 @@
   <tr>
     <th>Quantity</th>
     <th>Payment</th>
-	 <th>Ride</th>
-    <th>User</th>
+	
     <th></th>
     <th></th>
     <th></th>
@@ -15,9 +14,10 @@
   <tr>
     <td><%= order.quantity %></td>
     <td><%= order.payment %></td>
-	<td><%= order.ride_id %></td>
-    <td><%= order.user_id %></td>
+	
     <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
